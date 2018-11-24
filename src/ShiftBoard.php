@@ -15,6 +15,15 @@ class ShiftBoard
     /** @var GuzzleHttp\Client as GuzzleClient */
     protected $client;
 
+    /**
+     *
+     * Requires accessKey and signatureKey to
+     * initialize ShiftBoard API Wrapper
+     *
+     * @param string accessKey ShiftBoard provided access key
+     * @param string signatureKey ShiftBoard provided signature key
+     * @param string url optional base URI
+     */
     public function __construct(string $accessKey, string $signatureKey, string $url = null)
     {
         $this->accessKey = $accessKey;
@@ -25,7 +34,16 @@ class ShiftBoard
         ]);
     }
 
-    public function call($method, $params = [])
+    /**
+     *
+     * Using shiftdata https://www.shiftdata.com/#account-object
+     * Select a method under Objects and then you may pass any parameters
+     * specified in the documentation
+     *
+     * @param string method ShiftBoard object
+     * @param array params accepts valid parameters based on method choosen
+     */
+    public function call(string $method, array $params = [])
     {
         $json_params = $this->getJsonEncodedParams($params);
         $uri64_params = $this->getBase64UrlEncodedParams($json_params);
