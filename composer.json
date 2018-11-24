@@ -1,10 +1,10 @@
 {
     "name": "Pimentelk/shiftboard",
-    "description": "Package to facilitate accessing shiftboard API.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[S\u001b[C\u001b[C\u001b[C\u001b[C\u001b[B\u001b[F",
+    "description": "Package to facilitate accessing shiftboard API.",
     "authors": [
         {
             "name": "Kevin Pimentel",
-            "email": "de56ep@gmail.com"
+            "email": "PimentelKevin06@gmail.com"
         }
     ],
     "require": {
